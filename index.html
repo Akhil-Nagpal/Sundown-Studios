@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
+    <div class="image-container"></div>
+    <main class="main-content">
       <div class="layout">
         <nav class="navbar">
-          <img src="./assests/Sundown-logo.svg" alt="Sundown-logo" />
+          <img src="assests/Sundown-logo.svg" alt="Sundown-logo" />
           <div class="nav-items">
             <a href="#">Work</a>
             <a href="#">Studio</a>
@@ -31,19 +32,169 @@
             <h1>Spaces That Inspire</h1>
           </div>
         </div>
+
         <div class="main-video">
-          <video autoplay loop muted src="./assests/main.mp4"></video>
+          <video autoplay loop muted src="/assests/main.mp4"></video>
         </div>
 
         <div class="marquee">
-          <h3 class="marquee-list">Experiences</h3>
-          <div class="drop"></div>
-          <h3 class="marquee-list">Content</h3>
-          <div class="drop"></div>
-          <h3 class="marquee-list">Environments</h3>
-          <div class="drop"></div>
+          <div class="marquee-wrapper">
+            <h1>EXPERIENCES</h1>
+            <div class="drop"></div>
+            <h1>CONTENT</h1>
+            <div class="drop"></div>
+            <h1>ENVIRONMENTS</h1>
+            <div class="drop"></div>
+          </div>
+          <div class="marquee-wrapper">
+            <h1>EXPERIENCES</h1>
+            <div class="drop"></div>
+            <h1>CONTENT</h1>
+            <div class="drop"></div>
+            <h1>ENVIRONMENTS</h1>
+            <div class="drop"></div>
+          </div>
+          <div class="marquee-wrapper">
+            <h1>EXPERIENCES</h1>
+            <div class="drop"></div>
+            <h1>CONTENT</h1>
+            <div class="drop"></div>
+            <h1>ENVIRONMENTS</h1>
+            <div class="drop"></div>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="about-info">
+            <p>
+              We are a group of design- <br />
+              driven, goal-focused <br />
+              creators, producers, and <br />
+              designers who believe that <br />
+              the details make all the <br />
+              difference.
+            </p>
+          </div>
+          <div class="about-card">
+            <img src="/assests/about.jpg" alt="about" />
+            <p>
+              We love to create, we love to solve, we love to collaborate, and
+              we love to turn amazing ideas into reality. We’re here to partner
+              with you through every step of the process and know that
+              relationships are the most important things we build.
+            </p>
+          </div>
+          <div class="circle"></div>
+          <div class="circle2"></div>
+        </div>
+
+        <div class="featured-projects">
+          <h1 class="heading">
+            <div class="dot"></div>
+            Featured Projects
+          </h1>
+
+          <div class="list-container">
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%2520of%2520Nike_Soho_50th_SU22_FL1_6176-p-1080.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">50th Aniivarsary</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b163b_Copy-of-IMG_1180-p-1080.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">SOHO NYC</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16c5_Copy%2520of%2520Nike_Soho_AMD21_0781_LORES-p-1080.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">Air Force 12021</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1643_Copy%2520of%2520DSC04080-p-1600.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">SOHO 2023</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1711_AM704201-p-1600.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">NYFW Popup</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b169c_Copy%2520of%2520211023_NikeCHI_PlayNewKids_Beauty-16-p-1600.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">Play New Kidvision</h2>
+            </div>
+            <div
+              class="project-list"
+              data="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1732_Nike_HOI_50th_SU22_FL1_5393-p-1600.webp"
+            >
+              <div class="overlay"></div>
+              <h2 class="list-heading">Makers Studio HOI</h2>
+            </div>
+          </div>
+
+          <div class="btn">
+            <a class="project-btn" href="#"
+              >All Projects
+              <svg
+                width="32"
+                height="14"
+                viewBox="0 0 29 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="svg-container"
+              >
+                <path d="M22 1L28 7L22 13" stroke="#0b0500" />
+                <path d="M28 7H0" stroke="#0b0500" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </main>
+    <div class="footer-container"></div>
+    <footer class="footer">
+      <div class="menus">
+        <div class="menu-items">
+          <h2>Work</h2>
+          <h2>Services</h2>
+          <h2>Contact</h2>
+        </div>
+        <div class="input-field">
+          <label for="email"
+            >Get industry insights and creative inspiration straight to your
+            inbox.</label
+          >
+          <input type="email" placeholder="Email" id="email" />
+        </div>
+      </div>
+      <h1 class="footer-heading">Sundown</h1>
+      <div class="footer-links">
+        <h2>Copyright &copy; Akhil Nagpal</h2>
+        <h2>
+          <img
+            src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15cb_Globe.svg"
+            alt="location"
+          />
+          Brooklyne,NY
+        </h2>
+        <h2>Instagram</h2>
+        <h2>LinkedIn</h2>
+      </div>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>

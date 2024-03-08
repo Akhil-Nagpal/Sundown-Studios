@@ -6,6 +6,24 @@
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
+.image-container {
+  display: none;
+  width: 25vw;
+  height: 30vw;
+  position: fixed;
+  border-radius: 10px;
+  left: 50%;
+  top: 20%;
+  z-index: 20;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-content {
+  z-index: 10;
+  position: relative;
+}
+
 .layout {
   width: 100%;
   min-height: 100vh;
@@ -18,6 +36,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 2vw 2vw;
+}
+.layout .navbar img {
+  cursor: pointer;
 }
 .layout .navbar .nav-items {
   display: flex;
@@ -89,11 +110,262 @@
   width: 100%;
   border-radius: 30px;
 }
+.layout .marquee {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.layout .marquee::-webkit-scrollbar {
+  display: none;
+}
+.layout .marquee .marquee-wrapper {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: marquee;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.layout .marquee .marquee-wrapper h1 {
+  font-size: 8vw;
+  display: inline-block;
+  letter-spacing: -5px;
+}
+.layout .marquee .marquee-wrapper .drop {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  place-items: center;
+  background-color: #fe320a;
+  margin: 1vw 2vw;
+}
 @keyframes marquee {
   from {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
+}
+.layout .about {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 5.5vw;
+  padding-top: 5.5vw;
+  padding-bottom: 20vw;
+  margin-top: 2vw;
+  position: relative;
+  z-index: 1;
+}
+.layout .about .about-info {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -4px;
+}
+.layout .about .about-card {
+  margin-top: 10vw;
+  width: 25%;
+}
+.layout .about .about-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2.5vw;
+}
+.layout .about .about-card p {
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+}
+.layout .about .circle {
+  background-color: #fe320a;
+  width: 35vw;
+  height: 35vw;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -1;
+  animation: sun 3s linear alternate infinite;
+}
+.layout .about .circle2 {
+  background-color: #ff6600;
+  width: 35vw;
+  height: 35vw;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -2;
+  animation: sun 3s linear alternate infinite;
+}
+@keyframes sun {
+  from {
+    transform: translate(5%, -5%) skew(-10deg);
+  }
+  to {
+    transform: translate(-20%, 20%) skew(10deg);
+  }
+}
+.layout .featured-projects {
+  width: 100%;
+  padding-bottom: 3vw;
+}
+.layout .featured-projects .heading {
+  width: 100%;
+  padding: 4vw 2vw;
+  font-weight: 100;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.layout .featured-projects .heading .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fe320a;
+}
+.layout .featured-projects .project-list {
+  width: 100%;
+  height: 120px;
+  align-items: center;
+  border-bottom: 1px solid #c1bcb5;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
+}
+.layout .featured-projects .project-list:hover .overlay {
+  top: 0;
+}
+.layout .featured-projects .project-list .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #ff9831;
+  position: absolute;
+  top: -100%;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+.layout .featured-projects .project-list .list-heading {
+  font-size: 50px;
+  align-items: center;
+  padding: 2.5vw 2vw;
+  letter-spacing: -3px;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+.layout .featured-projects .btn {
+  display: flex;
+  padding: 4vw 2vw;
+}
+.layout .featured-projects .btn .project-btn {
+  padding: 15px 25px;
+  border: 1px solid #c1bcb5;
+  text-decoration: none;
+  color: #0b0500;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50px;
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+.layout .featured-projects .btn .project-btn::after {
+  content: "";
+  width: 100%;
+  height: 150%;
+  background-color: #0b0500;
+  position: absolute;
+  left: 0;
+  bottom: -150%;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.layout .featured-projects .btn .project-btn:hover {
+  color: white;
+}
+.layout .featured-projects .btn .project-btn:hover .svg-container path {
+  stroke: #efeae3;
+}
+.layout .featured-projects .btn .project-btn:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.footer-container {
+  height: 100vh;
+  background-color: #0b0500;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  color: #efeae3;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.footer .footer-heading {
+  font-size: 21vw;
+  width: 100%;
+  text-align: center;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 0vw 2vw;
+  padding: 2vw 0;
+  border-top: 0.5px solid #c1bcb5;
+}
+.footer .footer-links h2:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.footer .footer-links h2 {
+  font-size: 16px;
+  font-weight: 100;
+}
+.footer .menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 6vw;
+  font-size: 24px;
+}
+.footer .menus .menu-items {
+  margin-bottom: 4vw;
+}
+.footer .menus .menu-items h2 {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.footer .menus .menu-items h2:hover {
+  color: #c1bcb5;
+}
+.footer .menus .input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 25%;
+}
+.footer .menus .input-field label {
+  font-size: 18px;
+}
+.footer .menus .input-field input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c1bcb5;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
